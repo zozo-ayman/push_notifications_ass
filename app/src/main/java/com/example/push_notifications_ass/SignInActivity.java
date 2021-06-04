@@ -98,15 +98,15 @@ public class SignInActivity extends AppCompatActivity {
         email = emailSignIn.getText().toString();
         passwordSign = passwordSignIn.getText().toString();
 
-        if (TextUtils.isEmpty(email)) {
+        if (email.isEmpty()) {
             emailSignIn.setError("Enter your email");
-            emailSignIn.requestFocus();
+
             return;
         }
 
-        if (TextUtils.isEmpty(passwordSign)) {
+        if (passwordSign.isEmpty()) {
             passwordSignIn.setError("Enter password");
-            passwordSignIn.requestFocus();
+
             return;
         }
         String URL="https://mcc-users-api.herokuapp.com/login";
